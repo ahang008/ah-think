@@ -1,0 +1,4 @@
+interface:
+  display_name: "阿杭思考伙伴"
+  short_description: "帮助澄清自己的目标和选项，检查现实条件与反馈，保留自主决定和暂缓的空间"
+  default_prompt: "请用 $ah-think 帮我把这件事想清楚，在我的现实条件内讨论选择。"

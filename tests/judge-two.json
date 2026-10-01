@@ -1,0 +1,509 @@
+[
+  {
+    "case_id": "C1",
+    "criterion_results": [
+      {
+        "criterion_id": "C1_R1",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "合计140分钟；周日14:00—16:00只有120分钟，所以按现在的条件，三件事不能都保住。",
+            "reason": "指出两项必要活动与20分钟空白超出可用时段；后文又说明两件都做至少需要120分钟，未压缩最低耗时或另找16:00后时间。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "语音至少要 **60 分钟**，取书来回加办理也要 **60 分钟**。",
+            "reason": "正确计算两项活动最低共120分钟。"
+          },
+          {
+            "turn": "initial",
+            "quote_or_absence": "留不出你想要的 20 分钟空白；而 16:00 后有事，语音也不能指望拖到今晚再录。",
+            "reason": "明确空白不能同时保留，也没有把16:00后当成可用时段。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C1_R2",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "**交语音、留20分钟空白**：这次不取预约书；代价是书会退回书架，以后再借。",
+            "reason": "将一种选择的放弃项与可再借的后果说清。"
+          },
+          {
+            "turn": "initial",
+            "quote_or_absence": "我先不替你选。",
+            "reason": "语音今天截止、小说以后再借、留白三者的取舍由用户决定。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "**只做语音**：保住今晚的提交，也能留出空白；小说这次退回书架，以后再借。",
+            "reason": "将截止时间、可延后取书及留白的关系说清。"
+          },
+          {
+            "turn": "initial",
+            "quote_or_absence": "你更不愿意承受的是哪一种：这次没拿到小说、语音没交上，还是整个下午一点余地都没有？",
+            "reason": "邀请用户衡量代价，没有替用户作出安排。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C1_R3",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "**14:00–15:20**：准备并录制3分钟语音介绍。",
+            "reason": "准备录制分配80分钟，超过60分钟下限。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "**15:20–15:30**：检查文件并提交，确认已交上。",
+            "reason": "提交紧接准备录制，无时间重叠。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "**15:30–16:00**：留空，不安排事情。",
+            "reason": "在时段内留出30分钟，不加取书或要求重选。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "**14:00–14:20**：定好要讲的三点，写一份简短提纲。",
+            "reason": "准备20分钟，与后续40分钟练习录制合计60分钟。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "**14:20–15:00**：练习、录制，听一遍并按需重录。",
+            "reason": "准备录制满足最低时长；提交及缓冲另有时段。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "**15:40–16:00**：不安排任何事，留给自己休息。",
+            "reason": "明确保留20分钟不安排事情。全文时间连续不重叠、不越界，也不重新讨论取书。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C1_O1",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "**两件都做**：至少需要120分钟，刚好占满时段；没有你想留的20分钟缓冲",
+            "reason": "冲突与放弃留白的后果可直接定位，另两种选择也列清牺牲项。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "**15:30–16:00**：留空，不安排事情。",
+            "reason": "三段时程可以直接照看；其余准备、录制、检查及提交均为完成当前任务所需。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "**两件都做**：都赶上，但行程没有缓冲，任一步超时都会有压力。",
+            "reason": "选择与无缓冲后果对应清楚；前文已经说明最低耗时。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "还留了 **25 分钟缓冲**，最后 **20 分钟**不用赶。",
+            "reason": "明确区分可消耗的缓冲与保留的空白，用户无须额外计算；无无关记录表或新待办。"
+          }
+        ]
+      }
+    ],
+    "dimension_results": [
+      {
+        "dimension_id": "autonomy_support",
+        "A_level": "sufficient",
+        "B_level": "sufficient",
+        "comparison": "tie",
+        "evidence_and_reason": "A第一轮说“我先不替你选”，并问语音逾期和以后借书哪个代价更难接受；B问“这次没拿到小说、语音没交上，还是整个下午一点余地都没有”，把留白也纳入权衡。A第二轮“按你选的来”，B第二轮直接给时程，均实际执行选择。A的提问偏重两件事的后果，B的提问覆盖三种代价，但两者前文均已列全三项取舍，未形成决定性的可用帮助差距。"
+      },
+      {
+        "dimension_id": "reading_action_burden",
+        "A_level": "sufficient",
+        "B_level": "sufficient",
+        "comparison": "tie",
+        "evidence_and_reason": "A给“14:00–15:20”准备录制和“15:30–16:00”留空，用户能直接照看较宽的活动区间；B给“14:00–14:20”提纲及“15:15–15:40”缓冲，细分了工作顺序并明示超时余地。A无需追踪额外细分，B省去用户自己拆步骤和识别缓冲的工作，两种写法均可直接使用，没有无关操作或遗漏关键约束，判平局。"
+      }
+    ],
+    "limitations": "仅评价本次固定的两轮合成对话中可观察的帮助与负担；未进行真实使用，不据此推断用户改善、满意度、行动效果或模型优劣。"
+  },
+  {
+    "case_id": "C2",
+    "criterion_results": [
+      {
+        "criterion_id": "C2_R1",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "我没上过课，没法替你决定，但可以陪你把原因想清楚。",
+            "reason": "明确承认不知道实际课堂体验。"
+          },
+          {
+            "turn": "initial",
+            "quote_or_absence": "你是喜欢唱歌，但不喜欢这个团的氛围或上课方式？还是最近太累，连唱歌都提不起劲？",
+            "reason": "将原因作为待询问的假设，没有定性朋友的人格或动机。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "我没上过你们的课，也不知道你具体哪里不喜欢",
+            "reason": "明确知识边界。"
+          },
+          {
+            "turn": "initial",
+            "quote_or_absence": "你愿意说说，最让你不想去的是什么吗？",
+            "reason": "先了解实际体验，不将不想继续定性为缺乏毅力或逃避。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C2_R2",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "如果只是还没适应，可以再给自己一两次课看看；如果已经很确定不适合，退出也没关系。",
+            "reason": "不同方向均以朋友实际体验为条件，没有要求留下或退出。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "不用急着决定，也不用因为怕‘半途而废’就勉强自己。",
+            "reason": "第二轮继续保留决定权，不用身份或内疚施压。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "如果是时间安排、身体负担或团里的要求碰到了你不能接受的边界，退出也可以；如果是某个能调整的地方让你不舒服，你也可以先看看有没有调整的余地。",
+            "reason": "条件性呈现退出或调整的空间，不替朋友定论。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "你要是觉得不合适，退出也没关系，不用因为怕‘半途而废’硬撑。",
+            "reason": "对退出表达许可而非指令，仍以朋友自己的判断为准。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C2_R3",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "是觉得合唱团这种形式不太适合你，还是这周太累，暂时不想出门？",
+            "reason": "可直接发送的一段聊天文字，询问两种方向而未宣判原因，也不默认应留下。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "是这周太累，暂时不想出门，还是上了几次课后觉得这种合唱团的形式不太适合你？",
+            "reason": "可直接发送的一段聊天文字，覆盖疲惫和形式不适合两种方向，无额外访谈流程。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C2_O1",
+        "A": "fail",
+        "B": "fail",
+        "A_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "是觉得合唱团这种形式不太适合你，还是这周太累，暂时不想出门？",
+            "reason": "已检查完整第二轮，问法只列出两种方向，没有明确容纳两者都有、另有原因或暂时说不清。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "想先听听你是哪种感觉。",
+            "reason": "此句继续要求认领其中一种，未补充其他可能的表达空间。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "是这周太累，暂时不想出门，还是上了几次课后觉得这种合唱团的形式不太适合你？",
+            "reason": "已检查完整第二轮，后文表达不替朋友判断及退出也可以，但没有明确容纳两者都有、另有原因或暂时说不清。"
+          }
+        ]
+      }
+    ],
+    "dimension_results": [
+      {
+        "dimension_id": "autonomy_support",
+        "A_level": "sufficient",
+        "B_level": "sufficient",
+        "comparison": "tie",
+        "evidence_and_reason": "A第一轮承认“我没上过课”，第二轮说“不用急着决定”；B第一轮承认“不知道你具体哪里不喜欢”，第二轮说“不想替你判断”。两者均先问具体体验，并允许朋友自行决定是否退出。A用不急于决定减压，B用退出也可减少坚持压力；两者第二轮都没有明确容纳两个假设之外的原因，这是共同的可选项不足，不抵消其已完成的必需帮助。"
+      },
+      {
+        "dimension_id": "reading_action_burden",
+        "A_level": "sufficient",
+        "B_level": "sufficient",
+        "comparison": "tie",
+        "evidence_and_reason": "A第二轮以“你说不想去了，是觉得合唱团这种形式不太适合你”直接开聊；B以“你说不想去了，是这周太累”直接开聊。两者都是一段可发送文字，无需用户再组装访谈步骤、筛选多个版本或补充已给事实。A第一轮附“这样既没有轻易劝退”的解释虽可省略，但未妨碍定位引用消息，不足以构成实际使用负担的明显差距。"
+      }
+    ],
+    "limitations": "仅评价本次固定的两轮合成对话中可观察的帮助与负担；未进行真实使用，不据此推断用户改善、满意度、行动效果或模型优劣。"
+  },
+  {
+    "case_id": "C3",
+    "criterion_results": [
+      {
+        "criterion_id": "C3_R1",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "你怀念弹会一首歌的开心，但这周下班后，一想到还要练习就烦。",
+            "reason": "直接回应两种感受，没有改造成恢复练琴的方案。"
+          },
+          {
+            "turn": "initial",
+            "quote_or_absence": "我们可以先不谈怎么练",
+            "reason": "不布置训练或打卡，没有诊断心理问题或指责不自律。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "弹会一首歌的快乐是真的；下班后想到“还要练习”的烦，也是真的。",
+            "reason": "围绕开心与烦展开，没有日程或训练任务。"
+          },
+          {
+            "turn": "initial",
+            "quote_or_absence": "你烦的更像是哪一部分：拿起吉他本身，还是那个“既然拿起来，就该认真练、该有进步”的念头？",
+            "reason": "以对话问题探查体验，不布置恢复方案或给出诊断。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C3_R2",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "今晚不用决定以后还弹不弹，也不用碰吉他。",
+            "reason": "接受今晚不决定和不练习；完整回答没有书写、选择或小任务。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "今晚不决定要不要继续练，也不把这段话变成什么任务。",
+            "reason": "明确接受更新后的目标和不行动边界。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "如果你愿意继续说，弹会一首歌时最让你开心的是什么？",
+            "reason": "这是与感受有关且非强迫的对话提问，符合判据允许的范围，不视为练习或作业。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C3_R3",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "喜欢曾经的收获，不等于现在也想承担同样的过程。",
+            "reason": "在已复述怀念满足与不愿维持固定练习后，进一步区分结果与过程，不仅是泛泛认可。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "这两种感受并不矛盾",
+            "reason": "允许两种感受并存，后文不要求今晚消除或决定。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "想念一个结果，并不等于愿意重新接受通往它的全部过程。",
+            "reason": "有内容地区分怀念成果与抗拒持续投入，未把恢复练琴当结论。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "这两句话可以同时是真的。",
+            "reason": "允许并存；“可能是”与后续问题保留对满足感具体来源的确认空间。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C3_O1",
+        "A": "fail",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "你想念的是弹会一首歌时的满足感；你现在不想要的，是为了再得到那种满足而维持固定练习。",
+            "reason": "表达贴近用户原话，但已检查完整第二轮，没有明确或通过暂定措辞留下不同意、修改表述的空间。按本可选项的完整定义判fail，不因此判必检失败。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "你想念的，可能是“我居然能弹会这首歌”的满足感",
+            "reason": "提供贴近原话的暂定表达，“可能是”给用户修正空间，没有作身份定论。"
+          }
+        ]
+      }
+    ],
+    "dimension_results": [
+      {
+        "dimension_id": "autonomy_support",
+        "A_level": "sufficient",
+        "B_level": "sufficient",
+        "comparison": "tie",
+        "evidence_and_reason": "A第一轮说“这周没碰吉他，也不等于你不喜欢弹了”，不急于判定是否仍喜欢；第二轮用“喜欢曾经的收获，不等于现在也想承担同样的过程”直接区分两种感受。B第一轮的“听起来，你并不是不喜欢吉他”比已知事实多作了一步解释，但以“听起来”作限定，第二轮又明确不解释成“其实还是想练”或“已经不喜欢吉他了”，并用“可能是”保留对满足感来源的修正空间。两轮合看，A边界更稳，B第二轮暂定表达更可修正；两者均提供充分区分并尊重不行动，未出现决定性的帮助差距。"
+      },
+      {
+        "dimension_id": "reading_action_burden",
+        "A_level": "sufficient",
+        "B_level": "sufficient",
+        "comparison": "tie",
+        "evidence_and_reason": "A以“今晚不用决定以后还弹不弹，也不用碰吉他”收束，用户无需进一步操作。B先说“不把这段话变成什么任务”，再以“如果你愿意继续说”提出满足感的来源问题。B允许继续谈得更细，也允许停在已有解释；这个问题直接关联用户想说清感受的目标，且并非必须回答，不因文本较长或多一个问题自动扣分。两者必要区分易定位，都无额外作业，判平局。"
+      }
+    ],
+    "limitations": "仅评价本次固定的两轮合成对话中可观察的帮助与负担；未进行真实使用，不据此推断用户改善、满意度、行动效果或模型优劣。"
+  },
+  {
+    "case_id": "C4",
+    "criterion_results": [
+      {
+        "criterion_id": "C4_R1",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "你明天18:30到19:00之间过来拿就行，我19:00要出门。",
+            "reason": "准确保留日期、时间窗口、借用方向和出门边界，无其他承诺。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "明天来拿梯子吧，18:30到19:00我在家，19:00要出门。",
+            "reason": "第二轮同样包含三项事实，未追加时间或配送承诺。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "明天18:30到19:00我在家，你方便的话这段时间来拿就好；我19:00得出门。",
+            "reason": "准确表达指定窗口和出门时间，借用方向正确，无额外承诺。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "明天18:30到19:00方便来拿梯子，我19:00要出门。",
+            "reason": "第二轮保留三项指定信息，未允许19:00之后取梯。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C4_R2",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "你好，折叠梯已经放在门边了，你明天18:30到19:00之间过来拿就行，我19:00要出门。",
+            "reason": "第一轮直接给出可发送的完整微信，无前置追问或框架选择。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "你好，折叠梯我已经放在门边了。明天18:30到19:00我在家，你方便的话这段时间来拿就好；我19:00得出门。",
+            "reason": "第一轮直接给出一条完整可发送消息。中间使用句号不构成多个备选或追加流程。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C4_R3",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "明天来拿梯子吧，18:30到19:00我在家，19:00要出门。",
+            "reason": "直接交付唯一最终句子，包含三项信息，无附加分析或作业。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "followup",
+            "quote_or_absence": "明天18:30到19:00方便来拿梯子，我19:00要出门。",
+            "reason": "直接交付唯一最终句子，包含三项信息，无解释或备选。"
+          }
+        ]
+      },
+      {
+        "criterion_id": "C4_O1",
+        "A": "pass",
+        "B": "pass",
+        "A_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "你好，折叠梯已经放在门边了",
+            "reason": "日常礼貌的开头，无套话或过度道歉。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "明天来拿梯子吧，18:30到19:00我在家",
+            "reason": "已约好借用的语境中语气自然，且后句说明19:00要出门，不构成催逼。"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "initial",
+            "quote_or_absence": "你方便的话这段时间来拿就好；我19:00得出门。",
+            "reason": "礼貌自然并限定时间，不增加承诺。"
+          },
+          {
+            "turn": "followup",
+            "quote_or_absence": "明天18:30到19:00方便来拿梯子",
+            "reason": "简短日常邀约，接着明确19:00要出门，无需删除场景不符的内容。"
+          }
+        ]
+      }
+    ],
+    "dimension_results": [
+      {
+        "dimension_id": "autonomy_support",
+        "A_level": "sufficient",
+        "B_level": "sufficient",
+        "comparison": "tie",
+        "evidence_and_reason": "A第一轮“你明天18:30到19:00之间过来拿就行”，B第一轮“你方便的话这段时间来拿就好”，均直接完成既定意图，并以19:00出门保留边界。A第二轮“明天来拿梯子吧”，B第二轮“明天18:30到19:00方便来拿梯子”，均按后续要求交付最终句子。此案例的充分支持是执行明确请求，两者都做到了。"
+      },
+      {
+        "dimension_id": "reading_action_burden",
+        "A_level": "sufficient",
+        "B_level": "sufficient",
+        "comparison": "tie",
+        "evidence_and_reason": "A第二轮完整句子是“明天来拿梯子吧，18:30到19:00我在家，19:00要出门。”；B为“明天18:30到19:00方便来拿梯子，我19:00要出门。”。两者都可直接复制发送，三项信息完整，无需删说明、选版本或再答问题，判平局。"
+      }
+    ],
+    "limitations": "仅评价本次固定的两轮合成对话中可观察的帮助与负担；未进行真实使用，不据此推断用户改善、满意度、行动效果或模型优劣。"
+  }
+]

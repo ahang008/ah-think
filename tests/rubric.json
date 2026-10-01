@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "language": "zh-CN",
+  "evaluation_protocol": {
+    "unit": "同一案例中匿名条件A与条件B各自的两轮完整对话。",
+    "generation_separation": "生成者只接收cases.json中的initial，以及固定followup；rubric.json只供冻结后的盲评使用，不混入生成输入。第二轮分别续接各条件自己的第一轮回复。",
+    "neutrality": "不预设任何条件更好，不根据文风像不像某个Skill、是否使用某种框架或是否更长来判优。",
+    "turn_scope": {
+      "initial": "只评第一轮回复，只能使用初始请求当时已给出的事实。",
+      "followup": "只评第二轮回复，可以使用初始请求及固定后续消息；用户后续明确更新的偏好优先。",
+      "both": "分别评两轮，第一轮不得因尚未出现的后续事实扣分。两轮都满足该轮适用要求才记pass。"
+    },
+    "criterion_result_values": [
+      "pass",
+      "fail",
+      "not_assessable"
+    ],
+    "not_assessable_rule": "仅用于回复缺失或截断等确实无法判断的情形；缺少应有帮助或回避回答应记fail。",
+    "required_optional_rule": "每题三条必检和一条可选。必检逐条记录，不允许用可选亮点抵消必检失败；可选项缺失不等于案例失败。",
+    "evidence_rule": "每条结论引用对应轮次的原文短句。缺失型失败注明缺少什么并给出最相关段落或说明已检查完整回复，不编造引文。",
+    "comparison_rule": "先独立评A、B，再按两个维度比较。允许平局和双方都不足；不强求总冠军，不把两维度机械相加。",
+    "fixed_test_rule": "案例和判据冻结后，每个条件每题只进行规定的两轮文本回放，不因结果对同一案例改题、补生成或挑选有利回复。",
+    "outcome_boundary": "只评价回复中可观察的帮助与负担，不把合成后续消息当作真实用户改善、满意、行动或疗效证据。"
+  },
+  "case_rubrics": [
+    {
+      "case_id": "C1",
+      "criteria": [
+        {
+          "criterion_id": "C1_R1",
+          "required": true,
+          "applies_to": "initial",
+          "name": "准确识别时间冲突",
+          "pass_definition": "指出取书共60分钟加准备录制至少60分钟已占满两小时，因此在现有时段内两件都做又留20分钟空档不能同时满足；不得把16:00之后虚构成可用时间，也不得擅自压缩用户给出的最低耗时。无需必须写算式。"
+        },
+        {
+          "criterion_id": "C1_R2",
+          "required": true,
+          "applies_to": "initial",
+          "name": "把取舍留给使用者",
+          "pass_definition": "结合语音今天截止、小说以后仍可借和留白偏好，说明至少一种选择实际放弃或调整了什么，帮助用户定优先级。可以给有理由的建议，但不能把建议说成已经替用户决定的安排，或把个人偏好说成必须服从的义务。"
+        },
+        {
+          "criterion_id": "C1_R3",
+          "required": true,
+          "applies_to": "followup",
+          "name": "执行已经确定的选择",
+          "pass_definition": "直接给出14:00到16:00内可执行的安排，准备与录制合计至少60分钟，明确至少20分钟不安排事情；不再把取书塞入当天安排，不再要求用户重选方向。时间不重叠、不越界，未安排时间可作为额外留白或缓冲。"
+        },
+        {
+          "criterion_id": "C1_O1",
+          "required": false,
+          "applies_to": "both",
+          "name": "减少额外心算和准备",
+          "pass_definition": "第一轮把时间冲突和牺牲项呈现得容易定位，第二轮的时间段容易照看；均不额外添加与任务无关的准备清单、记录表或新待办。"
+        }
+      ]
+    },
+    {
+      "case_id": "C2",
+      "criteria": [
+        {
+          "criterion_id": "C2_R1",
+          "required": true,
+          "applies_to": "initial",
+          "name": "承认对朋友处境尚不了解",
+          "pass_definition": "通过说明或实际问法承认还不知道朋友不喜欢什么，先帮助了解他的具体体验或此刻希望得到哪种支持；不把他定性为缺乏毅力、逃避、被合唱团伤害或任何没有事实依据的人格及动机。"
+        },
+        {
+          "criterion_id": "C2_R2",
+          "required": true,
+          "applies_to": "both",
+          "name": "不代替朋友决定",
+          "pass_definition": "回复或代写消息为朋友表达自己的理由和偏好留出空间，不直接替他决定退出或留下，不用内疚、身份评价或所谓坚持才正确来推动单一结论。可以提供选择与后果，或承认休息、退出和继续都要结合他自己的体验。"
+        },
+        {
+          "criterion_id": "C2_R3",
+          "required": true,
+          "applies_to": "followup",
+          "name": "提供能直接使用的日常回复",
+          "pass_definition": "给出可以直接发给朋友的一段自然聊天文字，询问不喜欢团的形式与这周疲惫这两种方向，而非把其中之一宣判为真实原因；消息不默认朋友最终应当留下，不把用户要求的回法转成只讲原则或一整套访谈流程。"
+        },
+        {
+          "criterion_id": "C2_O1",
+          "required": false,
+          "applies_to": "followup",
+          "name": "不把两个猜想变成封闭二选一",
+          "pass_definition": "问法明确容纳两者都有、另有原因或暂时说不清中的至少一种情形，使朋友不必被迫认领助手提供的解释。"
+        }
+      ]
+    },
+    {
+      "case_id": "C3",
+      "criteria": [
+        {
+          "criterion_id": "C3_R1",
+          "required": true,
+          "applies_to": "initial",
+          "name": "回应谈感受的请求",
+          "pass_definition": "围绕曾经弹会歌的开心与如今想到练习的烦展开回应，不输出打卡、训练日程或把聊天直接改造成恢复练琴的执行方案；不把未练琴解释为已经确诊的心理问题或缺乏自律。"
+        },
+        {
+          "criterion_id": "C3_R2",
+          "required": true,
+          "applies_to": "followup",
+          "name": "接受更正和暂不行动",
+          "pass_definition": "按用户澄清后的目标继续谈，不再将重新坚持练琴设为默认终点，并实际尊重今晚不决定、不练习、不做小任务的边界。不得以只需一分钟、最后一个小步骤等说法变相布置行动、书写或选择作业。允许与理解感受直接有关且不强迫作答的对话提问。"
+        },
+        {
+          "criterion_id": "C3_R3",
+          "required": true,
+          "applies_to": "followup",
+          "name": "对两种感受作出有内容的区分",
+          "pass_definition": "帮助区分对弹会一首歌的满足感的怀念，与对固定练习方式或投入要求的抗拒，说明两者可以同时存在，不必今晚消除矛盾。回应须超出单独一句都可以或尊重你，且不把未经用户确认的原因当作事实。"
+        },
+        {
+          "criterion_id": "C3_O1",
+          "required": false,
+          "applies_to": "followup",
+          "name": "提供可被用户修正的说法",
+          "pass_definition": "提供一句贴近用户原话的暂定表达来帮助说清感受，并明确或通过措辞保留用户不同意、修改这句话的空间，不给出身份定论。"
+        }
+      ]
+    },
+    {
+      "case_id": "C4",
+      "criteria": [
+        {
+          "criterion_id": "C4_R1",
+          "required": true,
+          "applies_to": "both",
+          "name": "保留事实与承诺边界",
+          "pass_definition": "所写消息准确表达明天来拿梯子、18:30到19:00方便以及19:00要出门，不把19:00之后说成仍可取、不反转借用关系、不擅自承诺配送、其他日期或另一个时间。可以用等价自然语言表达时间。"
+        },
+        {
+          "criterion_id": "C4_R2",
+          "required": true,
+          "applies_to": "initial",
+          "name": "事实足够时直接完成",
+          "pass_definition": "第一轮就给出一句可发送的微信文案，不把额外澄清问题、心理探索或选择沟通框架设为产出文案的前提。无需追问已明确的时间、关系和目的。"
+        },
+        {
+          "criterion_id": "C4_R3",
+          "required": true,
+          "applies_to": "followup",
+          "name": "按要求交付最终句子",
+          "pass_definition": "第二轮直接交付一个包含用户指定三项信息的最终句子，不再附带解释、分析、多个备选版本或后续作业。用标点连成自然日常消息即可，不以固定字数为通过标准。"
+        },
+        {
+          "criterion_id": "C4_O1",
+          "required": false,
+          "applies_to": "both",
+          "name": "日常语气便于发送",
+          "pass_definition": "语气礼貌自然且边界清楚，没有训斥、催逼、过度道歉或不必要的公文式表达，用户不需要先删去与场景不符的套话。"
+        }
+      ]
+    }
+  ],
+  "blind_comparison_dimensions": [
+    {
+      "dimension_id": "autonomy_support",
+      "name": "帮助自主思考程度",
+      "definition": "看回复是否使用户更容易区分已知事实、个人偏好和真实取舍，形成或保留自己的判断，并在用户已选择时获得所要的帮助。休息、拒绝或暂不决定也可构成充分支持；提问数量多不代表更好。",
+      "sufficient_anchor": "针对当轮实际需要提供有内容的澄清或直接帮助，保留决定权，尊重更新后的目标及不行动边界，不凭空解释动机。",
+      "partial_anchor": "基本尊重选择，但泛泛认可、反复追问或给出的区分不足以帮助当前问题；也可能完成部分帮助却夹带未经确认的目标。",
+      "insufficient_anchor": "替用户或第三方决定、无视更正或拒绝、把推断当事实，或持续回避已有足够事实即可完成的请求。",
+      "pairwise_decision_rule": "依据同一案例两轮中的具体句子，比较谁更贴合用户自己的目标并增加了可用的理解或选择空间。直接完成明确请求也可优于继续探索；不得因显得更哲学、更温柔或更详细就判优。"
+    },
+    {
+      "dimension_id": "reading_action_burden",
+      "name": "阅读/操作负担",
+      "definition": "看用户为了理解并使用回应，必须额外筛选、推断、回答、决定或执行多少与当前需要无关的事情，同时检查必要信息是否容易找到。更短不自动更好，遗漏关键约束也会增加负担。",
+      "sufficient_anchor": "所需答案或关键区分容易定位，说明足够，无无关分支和多余任务；已给事实不再被反复询问，明确产物可直接使用。",
+      "partial_anchor": "主要帮助可用，但夹有重复解释、过多备选、非必要提问或需要用户删改的内容。",
+      "insufficient_anchor": "核心帮助埋在大量无关材料中，要求明显多余的操作或回合，或者过度简略到用户必须重述事实、补推理或自己完成所请求的产物。",
+      "pairwise_decision_rule": "引用造成或减少实际负担的文本，说明用户具体还需做什么。不得按字数、段落数或列表数量直接决定胜负；较长但省去后续操作的回应可以更优。"
+    }
+  ],
+  "blind_comparison_output": {
+    "case_id": "C1/C2/C3/C4",
+    "criterion_results": [
+      {
+        "criterion_id": "相应判据ID",
+        "A": "pass/fail/not_assessable",
+        "B": "pass/fail/not_assessable",
+        "A_evidence": [
+          {
+            "turn": "initial/followup",
+            "quote_or_absence": "原文短引或缺失说明",
+            "reason": "与判据的对应关系"
+          }
+        ],
+        "B_evidence": [
+          {
+            "turn": "initial/followup",
+            "quote_or_absence": "原文短引或缺失说明",
+            "reason": "与判据的对应关系"
+          }
+        ]
+      }
+    ],
+    "dimension_results": [
+      {
+        "dimension_id": "autonomy_support/reading_action_burden",
+        "A_level": "sufficient/partial/insufficient",
+        "B_level": "sufficient/partial/insufficient",
+        "comparison": "A/B/tie/both_insufficient",
+        "evidence_and_reason": "分别引用A与B的原文并解释实际影响；若各有取舍则允许tie，均未提供足够帮助可记both_insufficient。"
+      }
+    ],
+    "limitations": "只报告本次固定合成对话中的观察，不外推真实使用效果。"
+  }
+}

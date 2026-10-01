@@ -1,0 +1,18 @@
+{
+  "C1": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "C2": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "C3": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "C4": {
+    "A": "skill",
+    "B": "baseline"
+  }
+}
